@@ -8,14 +8,14 @@ namespace MathmagicianTests
     public class EvenTests
     {
         [TestMethod]
-        public void EnsureICanCreateClassInstance()
+        public void EvenEnsureICanCreateClassInstance()
         {
             EvenNumbers even = new EvenNumbers();
             Assert.IsNotNull(even);
         }
 
         [TestMethod]
-        public void ShouldPrintFirstNumber()
+        public void EvenShouldPrintFirstNumber()
         {
             EvenNumbers even = new EvenNumbers();
             int expected = 2;
@@ -24,18 +24,9 @@ namespace MathmagicianTests
 
         }
 
-        [TestMethod]
-        public void ShouldPrintSequenceofNumbers()
-        {
-            EvenNumbers even = new EvenNumbers();
-            //Must create instance of the class before testing the class.
-            int[] expected = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-            int[] actual = even.GetSequence();
-            CollectionAssert.AreEqual(expected, actual);
-        }
 
         [TestMethod]
-        public void ShouldPrintNextNumber()
+        public void EvenShouldPrintNextNumber()
         {
             EvenNumbers even = new EvenNumbers();
             int input = 2;
@@ -46,7 +37,7 @@ namespace MathmagicianTests
 
 
         [TestMethod]
-        public void ShouldPrintAVariableSequenceofNumbers()
+        public void EvenShouldPrintAVariableSequenceofNumbers()
         {
             EvenNumbers even = new EvenNumbers();
             //Must create instance of the class before testing the class.
@@ -60,7 +51,7 @@ namespace MathmagicianTests
         {
             EvenNumbers even = new EvenNumbers();
             int length = 7;
-            string expected = "2 4 6 8 10 14 16";
+            string expected = "2 4 6 8 10 12 14";
             string actual = even.ToString(even.GetSequence(length));
             Assert.AreEqual(expected, actual);
         }
