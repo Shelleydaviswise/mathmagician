@@ -10,7 +10,7 @@ namespace Mathmagician
     {
         public OddNumbers()
         {
-            first = 1;
+            
             increment = 2;
         }
 
